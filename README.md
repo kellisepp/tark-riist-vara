@@ -1,2 +1,0 @@
-# urban-potato
-tarkvarteh projekt
