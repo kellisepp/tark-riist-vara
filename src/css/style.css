@@ -46,6 +46,9 @@ a {
 a:hover, a:active {
 	text-decoration:underline;
 }
+h1 {
+    font-size: 30px !important;
+}
 
 html {
     font-family: 'geomanist';
@@ -581,7 +584,7 @@ td img {
 
 
 .footer {
-    position: absolute;
+    position: relative !important;
     left: 0;
     right: 0;
     bottom: 0;
@@ -863,7 +866,7 @@ transform:rotate(-360deg);
 }
 
 .content-page .footer {
- 	background-image:url("../img/sisuala-sha.png");
+ 	/*background-image:url("../img/sisuala-sha.png");*/
 	background-position:top center; 
 	background-size:unset;
 	background-repeat:no-repeat;
@@ -873,6 +876,7 @@ transform:rotate(-360deg);
 
 
 .form {
+  position: absolute;
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
@@ -897,7 +901,7 @@ li a {
     text-decoration: none;
     padding: 15px;
     color: #fff;
-    font-size: 20px;
+    font-size: 17px !important;
     float: left;
     /*width: 50%;*/
     text-align: center;
@@ -913,10 +917,10 @@ li a {
 
 
 label {
-  position: absolute;
+  position: relative;
   transform: translateY(6px);
-  left: 13px;
-  color: #fff;
+    margin: 10px;
+  color: #4d4d4d;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
@@ -965,6 +969,7 @@ textarea {
   transition: border-color .25s ease, box-shadow .25s ease;
 }
 input {
+  position: inherit;
   font-size: 15px !important;
   display: table-row;
   width: 180px;

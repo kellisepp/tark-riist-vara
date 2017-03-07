@@ -80,7 +80,27 @@
 			</div>
 			<div class="sisuala clearfix">
                 <div class="col-md-12">
-                    <form>
+                    <form id="userform" submit.delegate="addRide()">
+                        <div><label for="lahteKoht">Lähtekoht</label><br><input id="lahteKoht" type="text" name="lahteKoht"><br><label for="sihtKoht">Sihtkoht</label><br><input id="sihtKoht" type="text" name="sihtKoht"></div>
+                        <div><label for="date">Kuupäev</label><br><input id="date" type="date" name="date"></div>
+                        <div><label for="time">Kellaaeg</label><br><input id="time" type="time" name="time"></div>
+                        <div><label for="freeSpace">Vaba ruum</label><br><input id="freeSpace" type="number" name="freeSpace">
+                        <select name="uhik">
+                            <option value="kg">kg</option>
+                            <option value="tonn">tonn</option>
+                            <option value="kuup">m3</option>
+                            <option value="EA">EA</option>
+                        </select></div>
+                        <div><label for="type">Sõiduki liik</label><select name="soiduk">
+                            <option value="auto">Sõiduauto</option>
+                            <option value="maastur">Maastur</option>
+                            <option value="kaubik">Kaubik</option>
+                            <option value="Veoauto">Veoauto</option>
+                        </select></div>
+                        <div><label for="additionalInfo">Lisainfo</label><textarea rows="3" cols="50" id="additionalInfo" type="text" name="additionalInfo"></textarea></div>
+                        <input type="submit" name="Registreeri soit">
+                        
+                        <!--
                         <p>Marsuut: </p>
                         <input type="text" name="start" placeholder="Lähtekoht"> - <input type="text" name="finish" placeholder="Sihtkoht">
                         <p>Kuupäev: </p>
@@ -106,7 +126,7 @@
                         <textarea rows="3" cols="50" name="lisainfo"></textarea>
                         <input type="submit" value="Registreeri sõit" class="reg-soit-btn">
                         <input type="reset" value="Tühista" class="reg-soit-btn">
-                    
+                    -->
                     
                     </form>
                     
