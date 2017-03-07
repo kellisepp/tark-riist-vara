@@ -1,0 +1,184 @@
+<template>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tarkvaratehnika</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico">
+	<link href="src/css/cc-fonts.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/style.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/animate.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/menutoggle.css" rel="stylesheet" type="text/css"  />
+	
+    <!-- Bootstrap -->
+    <link href="src/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="wrap content-page">
+
+		
+		<div class="mobileMenuToggle toggleHidden">
+			<div id="toggle-menu">
+				<div>
+					<span class="top"></span>
+					<span class="middle"></span>
+					<span class="bottom"></span>
+				</div>
+			</div>
+			<!-- <span class="non-mobile">Menüü</span> -->
+		</div>
+		<div class="header-bar">
+			<div class="hb-wrap">
+				<div class="small-logo">
+					<a href="index.html"><img src="src/img/Vedaja.png" /></a>
+				</div>
+				<div class="mainMenu-wrap clearfix">
+					<div class="mainMenu clearfix">
+						<div class="mob-menu-line">
+							<ul class="clearfix">
+								<li class="active"><a class="link" href="front-page.html"><span>Home</span></a></li>
+								<li><a class="link" href="about.html"><span>About Us</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-area fullscreen">
+			<div class="head-sizer"></div>
+			<div class="red-header">
+			</div>
+			<div id="headerimgs" style="background-image:url(src/img/road.jpg); background-position:bottom left;"></div>
+			<div class="page-title">
+				<h1>Sõidu registreerimine</h1>
+			</div>
+			<div class="logo">
+				<a href="index.html"><img src="src/img/Vedaja.png" /></a>
+			</div>
+		</div>
+		
+		<div class="content-wrapper content-w-side clearfix">
+		
+			<div class="sisuala-alamenu pull-right">
+				<ul class="clearfix">
+					<li><a href="vedaja.html">Vedaja</a></li>
+					<li><a href="#">Minu sõidud</a></li>
+					
+					
+				</ul>
+			</div>
+			<div class="sisuala clearfix">
+                <div class="col-md-12">
+                    <form id="userform" submit.delegate="addRide()">
+                        <div><label for="lahteKoht">Lähtekoht</label><br><input id="lahteKoht" type="text" name="lahteKoht"><br><label for="sihtKoht">Sihtkoht</label><br><input id="sihtKoht" type="text" name="sihtKoht"></div>
+                        <div><label for="date">Kuupäev</label><br><input id="date" type="date" name="date"></div>
+                        <div><label for="time">Kellaaeg</label><br><input id="time" type="time" name="time"></div>
+                        <div><label for="freeSpace">Vaba ruum</label><br><input id="freeSpace" type="number" name="freeSpace">
+                        <select name="uhik">
+                            <option value="kg">kg</option>
+                            <option value="tonn">tonn</option>
+                            <option value="kuup">m3</option>
+                            <option value="EA">EA</option>
+                        </select></div>
+                        <div><label for="type">Sõiduki liik</label><select name="soiduk">
+                            <option value="auto">Sõiduauto</option>
+                            <option value="maastur">Maastur</option>
+                            <option value="kaubik">Kaubik</option>
+                            <option value="Veoauto">Veoauto</option>
+                        </select></div>
+                        <div><label for="additionalInfo">Lisainfo</label><textarea rows="3" cols="50" id="additionalInfo" type="text" name="additionalInfo"></textarea></div>
+                        <input type="submit" name="Registreeri soit">
+                        
+                        <!--
+                        <p>Marsuut: </p>
+                        <input type="text" name="start" placeholder="Lähtekoht"> - <input type="text" name="finish" placeholder="Sihtkoht">
+                        <p>Kuupäev: </p>
+                        <input type="date" name="date">
+                        <p>Kellaaeg: </p>
+                        <input type="time" name="time">
+                        <p>Vaba ruum: </p>
+                        <input type="number" name="number">
+                        <select name="uhik">
+                            <option value="kg">kg</option>
+                            <option value="tonn">tonn</option>
+                            <option value="kuup">m3</option>
+                            <option value="EA">EA</option>
+                        </select>
+                        <p>Sõiduki liik:</p>
+                        <select name="soiduk" style="width:180px;">
+                            <option value="auto">Sõiduauto</option>
+                            <option value="maastur">Maastur</option>
+                            <option value="kaubik">Kaubik</option>
+                            <option value="Veoauto">Veoauto</option>
+                        </select>
+                        <p>Lisainformatsioon:</p>
+                        <textarea rows="3" cols="50" name="lisainfo"></textarea>
+                        <input type="submit" value="Registreeri sõit" class="reg-soit-btn">
+                        <input type="reset" value="Tühista" class="reg-soit-btn">
+                    -->
+                    
+                    </form>
+                    
+                </div>
+                
+                
+                
+                
+			</div>
+		
+		</div>
+		
+		<div class="footer-padding"></div>
+		
+		<div class="footer">
+			<div class="upper-footer">
+				<div class="row row-eq-height">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="row">
+							<div class="col-xs-6 foot-sec-title">
+								<h3>...</h3>
+							</div>
+							<div class="col-xs-7 foot-sec-txt">
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-xs-3 foot-logod">
+				
+				
+				
+				</div>
+			</div>
+			<div class="bot-footer">
+				
+			</div>
+		</div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="src/js/bootstrap.min.js"></script>
+	
+    <script src="src/js/flowtype.js"></script>
+    <script src="src/js/jquery.viewportchecker.min.js"></script>
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/vedaja-js.js"></script>
+    <script src="src/js/vedaja-menu.js"></script>
+   
+	
+  </body>
+</html>
+</template>

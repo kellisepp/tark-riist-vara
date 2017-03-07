@@ -1,0 +1,237 @@
+<template>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tarkvaratehnika</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico">
+	<link href="src/css/cc-fonts.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/style.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/animate.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/menutoggle.css" rel="stylesheet" type="text/css"  />
+	
+    <!-- Bootstrap -->
+    <link href="src/css/bootstrap.css" rel="stylesheet">
+
+  </head>
+  <body>
+	<div class="wrap content-page">
+
+		
+		<div class="mobileMenuToggle toggleHidden">
+			<div id="toggle-menu">
+				<div>
+					<span class="top"></span>
+					<span class="middle"></span>
+					<span class="bottom"></span>
+				</div>
+			</div>
+			<!-- <span class="non-mobile">Menüü</span> -->
+		</div>
+		<div class="header-bar">
+			<div class="hb-wrap">
+				<div class="small-logo">
+					<a href="index.html"><img src="src/img/Vedaja.png" /></a>
+				</div>
+				<div class="mainMenu-wrap clearfix">
+					<div class="mainMenu clearfix">
+						<div class="mob-menu-line">
+							<ul class="clearfix">
+								<li class="active"><a class="link" href="front-page.html"><span>Home</span></a></li>
+								<li><a class="link" href="about.html"><span>About Us</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-area fullscreen">
+			<div class="head-sizer"></div>
+			<div class="red-header">
+			</div>
+			<div id="headerimgs" style="background-image:url(src/img/road.jpg); background-position:bottom left;"></div>
+			<div class="page-title">
+				<h1>Vedaja</h1>
+			</div>
+			<div class="logo">
+				<a href="index.html"><img src="src/img/Vedaja.png" /></a>
+			</div>
+		</div>
+		
+		<div class="content-wrapper content-w-side clearfix">
+		
+			<div class="sisuala-alamenu pull-right">
+				<ul class="clearfix">
+					<li><a href="reg_soit.html">Registreeri sõit</a></li>
+					<li><a href="#">Minu sõidud</a></li>
+					
+					
+				</ul>
+			</div>
+			<div class="sisuala clearfix">
+                <div class="col-md-12">
+                    <table>
+                        <tr class="table-head">
+                          <th><img src="src/img/avatar.png"></th>
+                          <th><img src="src/img/truck.png"></th>
+                          <th>Kuupäev</th>
+                          <th>Kellaaeg</th>
+                          <th>Kaup</th>
+                          <th>Marsuut</th>
+                          
+                        </tr>
+                        <tr id="myBtn" style="cursor: pointer;" class="posts">
+                          <td><img src="src/img/avatar.png"></td>
+                          <td><img src="src/img/truck_4.jpg"></td>
+                          <td>09.03.17</td>
+                          <td>13:00</td>
+                          <td>2EA</td>
+                          <td>Tallinn-Tartu</td>
+                        </tr>
+                        <tr id="myBtn" style="cursor: pointer;" class="posts">
+                          <td><img src="src/img/avatar.png"></td>
+                          <td><img src="src/img/truck_4.jpg"></td>
+                          <td>09.03.17</td>
+                          <td>13:00</td>
+                          <td>2EA</td>
+                          <td>Tallinn-Tartu</td>
+                        </tr>
+                        <tr id="myBtn" style="cursor: pointer;" class="posts">
+                          <td><img src="src/img/avatar.png"></td>
+                          <td><img src="src/img/truck_4.jpg"></td>
+                          <td>09.03.17</td>
+                          <td>13:00</td>
+                          <td>2EA</td>
+                          <td>Tallinn-Tartu</td>
+                        </tr>
+                      </table>
+                    
+                    
+                    <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <span class="close">&times;</span>
+                              <table>
+                                <tr class="modal-table-row">
+                                    <td><img src="img/avatar.png"></td>
+                                    <td><img src="img/truck_4.jpg"></td>
+                                  </tr>
+                                </table>
+                            </div>
+                            <div class="modal-body">
+                            <table>
+                                <tr class="modal-table-row">
+                                    <td>09.03.17</td>
+                                    <td>13:00</td>
+                                    <td>2EA</td>
+                                    <td>Tallinn-Tartu</td>
+                                </tr>
+                                </table>
+                                <table>
+                                <tr class="modal-table-row">
+                                    <td>Lisainformatsioon:</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</td>
+                                </tr>
+                            </table>
+                            </div>
+                            <div class="modal-footer">
+                                <table>
+                                    <tr>
+                                        <td>Telefon</td>
+                                        <td>Email</td>
+                                    </tr>
+                                    <tr class="modal-table-row">
+                                        <td>12345678</td>
+                                        <td><a href="mailto:mari.maasikas@mail.com">mari.maasikas@mail.com</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                          </div>
+
+                        </div>
+                    
+                </div>
+                
+                
+                
+			</div>
+		
+		</div>
+		
+		<div class="footer-padding"></div>
+		
+		<div class="footer">
+			<div class="upper-footer">
+				<div class="row row-eq-height">
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="row">
+							<div class="col-xs-6 foot-sec-title">
+								<h3>...</h3>
+							</div>
+							<div class="col-xs-7 foot-sec-txt">
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-xs-3 foot-logod">
+				
+				
+				
+				</div>
+			</div>
+			<div class="bot-footer">
+				
+			</div>
+		</div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="src/js/bootstrap.min.js"></script>
+	
+    <script src="src/js/flowtype.js"></script>
+    <script src="src/js/jquery.viewportchecker.min.js"></script>
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/vedaja-js.js"></script>
+    <script src="src/js/vedaja-menu.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
+	
+  </body>
+</html>
+
+
+</template>
