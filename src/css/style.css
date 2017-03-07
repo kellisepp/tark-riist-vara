@@ -77,6 +77,7 @@ input, textarea, select, button {
 table {
     width: 100%;
     text-align: center;
+    font-size: 15px !important;
 }
 th {
     text-align: center !important;
@@ -964,7 +965,7 @@ textarea {
   transition: border-color .25s ease, box-shadow .25s ease;
 }
 input {
-  font-size: 15px;
+  font-size: 15px !important;
   display: table-row;
   width: 180px;
   height: 35px;
