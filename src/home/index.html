@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<template>
+<html lang="en">
+    
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tarkvaratehnika</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico">
+	<link href="src/css/cc-fonts.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/style.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/animate.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/menutoggle.css" rel="stylesheet" type="text/css"  />
+	
+    <!-- Bootstrap -->
+    <link href="src/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="wrap">
+		<div class="header-area fullscreen">
+			<div class="head-sizer"></div>
+			<div class="red-header">
+                <div class="form" style="float:right; background-color:rgba(0, 0, 0, 0.85); width:30%; margin: 30px;">
+                  <ul class="tab-group">
+                    <li class="active"><a href="#signup">Sign Up</a></li>
+                    <li><a href="#login">Log In</a></li>
+                  </ul>
+                    <div class="tab-content" style="width: 100%;">
+                        <div id="signup">   
+                            <h1>Sign Up</h1>
+                            <form>
+                                <div class="top-row">
+                                    <div class="field-wrap">
+                                        <input type="text" placeholder="First name"  style="width: 90%;" />
+                                    </div>
+                                    <div class="field-wrap">
+                                        <input type="text" placeholder="Last name" style="width: 90%;" />
+                                    </div>
+                                </div>
+                                    <div class="field-wrap">
+                                        <input type="email" placeholder="Email adress" style="width: 90%;" />
+                                    </div>
+                                    <div class="field-wrap">
+                                        <input type="password" placeholder="Password" style="width: 90%;"/>
+                                    </div>
+                                <button type="submit" class="button button-block" style="font-size: 20px;"><a href="front-page.html">Get Started</a></button>
+                        </form>
+                    </div>
+                    
+                    <div id="login">   
+                        <h1>Welcome Back!</h1>
+                        <form action="/" method="post">
+                            <div class="field-wrap">
+                                <input type="email" placeholder="Email adress" style="width: 90%;"/>
+                            </div>
+                        <div class="field-wrap">
+                            <input type="password" placeholder="Password" style="width: 90%;"/>
+                        </div>
+                        <p class="forgot"><a href="#">Forgot Password?</a></p>
+                        <button class="button button-block"/>Log In</button>
+                        </form>
+                    </div>
+                    </div><!-- tab-content -->
+              </div> <!-- /form -->
+			</div>
+			<div id="headerimgs">
+				<div id="headerimg1" class="headerimg"></div>
+				<div id="headerimg2" class="headerimg"></div>
+                <div id="headerimg3" class="headerimg"></div>
+			</div>
+			<div id="headertxt" class="come-in-right">
+				<span id="secondline"></span>
+				<span id="firstline"></span>
+			</div>
+			<div class="logo come-in-left">
+				<a href="index.html"><img src="src/img/Vedaja.png" /></a>
+			</div>
+		</div>    
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="src/js/bootstrap.min.js"></script>
+	
+    <script src="src/js/flowtype.js"></script>
+    <script src="src/js/jquery.viewportchecker.min.js"></script>
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/vedaja-menu.js"></script>
+    <script src="src/js/vedaja-js.js"></script>
+	
+	<script type="text/javascript" language="javascript">
+				var slideshowSpeed = 6000;
+
+				var photos = [
+				{
+					"image" : "road_2.jpg",
+					"firstline" : "Tere Tulemast!",
+					"secondline" : "..."
+				},
+				{
+					"image" : "road.jpg",
+					"firstline" : "Tere Tulemast!",
+					"secondline" : "..."
+				},
+                {
+					"image" : "road_2.jpg",
+					"firstline" : "Tere Tulemast!",
+					"secondline" : "..."
+				},
+                {
+					"image" : "road.jpg",
+					"firstline" : "Tere Tulemast!",
+					"secondline" : "..."
+				},
+                {
+					"image" : "road_2.jpg",
+					"firstline" : "Tere Tulemast!",
+					"secondline" : "..."
+				},
+                
+				
+				];
+				
+				$(document).ready(function() {
+
+					// Backwards navigation
+					$("#back").click(function() {
+						stopAnimation();
+						navigate("back");
+					});
+
+					// Forward navigation
+					$("#next").click(function() {
+						stopAnimation();
+						navigate("next");
+					});
+
+					var interval;
+					$("#control").toggle(function(){
+						stopAnimation();
+					}, function() {
+						// Change the background image to "pause"
+						$(this).css({ "background-image" : "url(img/btn_pause.png)" });
+
+						// Show the next image
+						navigate("next");
+
+						// Start playing the animation
+						interval = setInterval(function() {
+							navigate("next");
+						}, slideshowSpeed);
+					});
+
+
+					var activeContainer = 1;
+					var currentImg = 0;
+					var animating = false;
+					var navigate = function(direction) {
+						// Check if no animation is running. If it is, prevent the action
+						if(animating) {
+							return;
+						}
+
+						// Check which current image we need to show
+						if(direction == "next") {
+							currentImg++;
+							if(currentImg == photos.length + 1) {
+								currentImg = 1;
+							}
+						} else {
+							currentImg--;
+							if(currentImg == 0) {
+								currentImg = photos.length;
+							}
+						}
+
+						// Check which container we need to use
+						var currentContainer = activeContainer;
+						if(activeContainer == 1) {
+							activeContainer = 2;
+						} else {
+							activeContainer = 1;
+						}
+
+						showImage(photos[currentImg - 1], currentContainer, activeContainer);
+
+					};
+
+					var currentZindex = -1;
+					var showImage = function(photoObject, currentContainer, activeContainer) {
+						animating = true;
+
+						// Make sure the new container is always on the background
+						currentZindex--;
+
+						// Set the background image of the new active container
+						$("#headerimg" + activeContainer).css({
+							"background-image" : "url('img/" + photoObject.image + "')",
+							"display" : "block",
+							"z-index" : currentZindex
+						});
+
+						// Hide the header text
+						$("#headertxt").css({"display" : "block"});
+
+						// Set the new header text
+						$("#firstline").html(photoObject.firstline);
+						$("#secondline")
+							.attr("href", photoObject.url)
+							.html(photoObject.secondline);
+						$("#pictureduri")
+							.attr("href", photoObject.url)
+							.html(photoObject.title);
+
+
+						// Fade out the current container
+						// and display the header text when animation is complete
+						$("#headerimg" + currentContainer).fadeOut(1700, function() {
+							setTimeout(function() {
+								$("#headertxt").css({"display" : "block"});
+								animating = false;
+							}, 500);
+						});
+					};
+
+					var stopAnimation = function() {
+						// Change the background image to "play"
+						$("#control").css({ "background-image" : "url(img/btn_play.png)" });
+
+						// Clear the interval
+						clearInterval(interval);
+					};
+
+					// We should statically set the first image
+					navigate("next");
+
+					// Start playing the animation
+					interval = setInterval(function() {
+						navigate("next");
+					}, slideshowSpeed);
+
+				});
+        
+                    //Signing form
+        
+                    $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+  
+                  var $this = $(this),
+                      label = $this.prev('label');
+
+                      if (e.type === 'keyup') {
+                            if ($this.val() === '') {
+                          label.removeClass('active highlight');
+                        } else {
+                          label.addClass('active highlight');
+                        }
+                    } else if (e.type === 'blur') {
+                        if( $this.val() === '' ) {
+                            label.removeClass('active highlight'); 
+                            } else {
+                            label.removeClass('highlight');   
+                            }   
+                    } else if (e.type === 'focus') {
+
+                      if( $this.val() === '' ) {
+                            label.removeClass('highlight'); 
+                            } 
+                      else if( $this.val() !== '' ) {
+                            label.addClass('highlight');
+                            }
+                    }
+
+                });
+
+                
+			</script>
+	
+  </body>
+</html>
+</template>
