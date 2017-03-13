@@ -20,6 +20,7 @@ img {
 
 body {
 	line-height:1;
+    font-family: Arial, Helvetica, sans-serif!important;
 }
 
 
@@ -44,14 +45,20 @@ a {
 }
 
 a:hover, a:active {
-	text-decoration:underline;
+	text-decoration: none;
+    text-emphasis: 600;
 }
 h1 {
     font-size: 30px !important;
 }
+h2 {
+    font-size: 22px !important;
+    font-weight: 400;
+    letter-spacing: 0.9px;
+}
 
 html {
-    font-family: 'geomanist';
+    font-family: Arial, Helvetica, sans-serif;
 	font-weight:normal;
 	font-size:medium;
 	color:#4d4d4d;
@@ -70,7 +77,7 @@ html, body {
 }
 
 input, textarea, select, button {
-    font-family: 'geomanist' !important;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .fullscreen {
@@ -878,7 +885,7 @@ transform:rotate(-360deg);
 .form {
   position: absolute;
   padding: 40px;
-  max-width: 600px;
+    width: 100%;
   margin: 40px auto;
     z-index: 5;
 }
@@ -953,10 +960,12 @@ option {
     border: 1px solid #a3a3a3;
     border-radius: 4px;
     margin: auto;
+    font-size: 13px !important;
+    padding: 5px 10px;
 }
 
 textarea {
-  font-size: 15px;
+  font-size: 15px !important;
   display: table;
   width: 350px;
   height: 100%;
@@ -972,10 +981,10 @@ input {
   position: inherit;
   font-size: 15px !important;
   display: table-row;
-  width: 180px;
+  width: 80%;
   height: 35px;
   padding: 5px 10px;
-  margin: auto;
+  margin: 10px 0!important;
   background: none;
   border: 1px solid #a3a3a3;
   color: #fff;
