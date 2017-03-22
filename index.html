@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<template>
+<html lang="en">
+    
+ <head>
     <meta charset="utf-8">
-    <title>Aurelia</title>
-  </head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tarkvaratehnika</title>
 
-  <body aurelia-app="main">
-    <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
+	<link href="src/css/style.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/animate.css" rel="stylesheet" type="text/css"  />
+	<link href="src/css/menutoggle.css" rel="stylesheet" type="text/css"  />
+	
+    <!-- Bootstrap -->
+    <link href="src/css/bootstrap.css" rel="stylesheet">
+
+  </head>
+  <body>
+	<div class="wrap">
+		<div class="header-area fullscreen">
+			<div class="head-sizer"></div>
+            <div class="headerimg">
+                <img src="src/img/road_3.jpg" style="position: fixed; top: 0, right: 0;">
+                </div>
+			<div class="red-header col-xs-12 col-sm-6 col-md-7 col-lg-6" style="float: right; background-color: rgba(0, 0, 0, 0.8); margin: 15% 3%; border-radius: 15px;">
+                <form id="signupform" submit.delegate="addUser()" style="margin: 15px;">
+                    
+                        <div id="signup" class="col-xs-12 col-md-6 col-lg-6" style="padding: 0 8px 15px 8px;">
+                            <h2>Registreeru kasutajaks</h2>
+                            <input id="firstName" type="text" name="firstName" placeholder="Eesnimi"><br>
+                            <input id="lastName" type="text" name="lastName" placeholder="Perekonnanimi"><br>
+                            <input id="email" type="email" name="email" placeholder="Email"><br>
+                            <input id="password" type="password" name="password" placeholder="Salasõna"><br>   
+                            <input id="signup" type="submit" name="register">
+                        </div>
+                </form>
+                    <form>
+                        
+                        <div id="login" class="col-xs-12 col-md-6 col-lg-6" style="padding: 0 8px 8px 0!important;">
+                            <h2>Logi sisse</h2>
+                            <input id="email" type="email" name="email" placeholder="Email"><br>
+                            <input id="password" type="password" name="password" placeholder="Salasõna"><br>
+                            <input id="signin" type="submit" name="signin">
+                        </div>
+                
+                </form>
+                
+                
+			</div>
+			<div class="logo come-in-left">
+				<a href="index.html"><img src="src/img/Vedaja.png" style="width: 180% !important;" /></a>
+			</div>
+		</div>    
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="src/js/bootstrap.min.js"></script>
+	
+    <script src="src/js/flowtype.js"></script>
+    <script src="src/js/jquery.viewportchecker.min.js"></script>
+    <script src="src/js/animations.js"></script>
+    <script src="src/js/vedaja-menu.js"></script>
+    <script src="src/js/vedaja-js.js"></script>
+	
+	
   </body>
 </html>
+</template>
