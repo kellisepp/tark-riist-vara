@@ -968,7 +968,7 @@ option {
 textarea {
   font-size: 15px !important;
   display: table;
-  width: 350px;
+  width: 90%;
   height: 100%;
   padding: 5px 10px;
   margin: auto;
@@ -982,7 +982,7 @@ input {
   position: inherit;
   font-size: 15px !important;
   display: table-row;
-  width: 80%;
+  width: 90%;
   height: 35px;
   padding: 5px 10px;
   margin: 10px 0!important;
