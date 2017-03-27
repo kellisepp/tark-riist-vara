@@ -128,13 +128,13 @@ td img {
 
 .headerimg,
 #headerimgs {
-	position:fixed;
+	position:absolute;
 	top:0;
 	left:0;
 	right:0;
 	bottom:0;
 	width:100%;
-	height:100% !important;
+	height:100%;
 	background-position:top left;
 	background-size:cover;
 }
@@ -1177,11 +1177,6 @@ textarea {
 .square-div.sd-link {
     background-color: #cccccc;
 }
-    
-.headerimg {
-        height:100% !important;
-        width: auto !important;
-    }
 
 }
 
