@@ -4420,7 +4420,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: rgba(0, 0, 0, 0.64);
+  background-color: rgba(0, 0, 0, 0.83);
   border-color: #000000;
 }
 .navbar-default .navbar-brand {

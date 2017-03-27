@@ -19,8 +19,7 @@
 
   </head>
   <body>
-      <require from="nav-bar.html"></require>
-    <nav-bar router.bind="router"></nav-bar>
+      
 	<div class="wrap content-page">
         <div class="header-area fullscreen">
 			<div class="head-sizer"></div>
@@ -28,10 +27,7 @@
 			</div>
 			<div id="headerimgs" style="background-image:url(src/img/road_3.jpg); background-position:bottom left;"></div>
 			<div class="page-title">
-				<h1>Vedaja</h1>
-			</div>
-			<div class="logo">
-				<a href="index.html"><img src="src/img/Vedaja.png" /></a>
+				<h1>${router.currentInstruction.config.title}</h1>
 			</div>
 		</div>
 		
@@ -93,8 +89,8 @@
                               <span class="close">&times;</span>
                               <table>
                                 <tr class="modal-table-row">
-                                    <td><img src="img/avatar.png"></td>
-                                    <td><img src="img/truck_4.jpg"></td>
+                                    <td><img src="src/img/avatar.png"></td>
+                                    <td><img src="src/img/truck_4.jpg"></td>
                                   </tr>
                                 </table>
                             </div>
@@ -140,33 +136,7 @@
 		
 		<div class="footer-padding"></div>
 		
-		<div class="footer">
-			<div class="upper-footer">
-				<div class="row row-eq-height">
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="row">
-							<div class="col-xs-6 foot-sec-title">
-								<h3>Vedaja AS</h3>
-							</div>
-							<div class="col-xs-7 foot-sec-txt">
-								Ehitajate tee 5, 19086 Tallinn
-                                Tel 123 456 78
-                                E-mail <a href="mailto:vedaja@vedaja.ee">vedaja@vedaja.ee</a>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="col-xs-3 foot-logod">
-				
-				
-				
-				</div>
-			</div>
-			<div class="bot-footer">
-				
-			</div>
-		</div>
+		
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
