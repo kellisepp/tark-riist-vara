@@ -81,7 +81,7 @@
 			<div class="sisuala clearfix">
                 <div class="col-md-6">
                     <form id="userform" submit.delegate="addRide()">
-                        <div><label for="lahteKoht">Lähtekoht</label><br><input id="lahteKoht" type="text" name="lahteKoht"><br><label for="sihtKoht">Sihtkoht</label><br><input id="sihtKoht" type="text" name="sihtKoht"></div>
+                        <div><label for="lahteKoht">Lähtekoht</label><br><input id="lahteKoht" type="text" name="lahteKoht" value.bind="userData.lahteKoht" ><br><label for="sihtKoht">Sihtkoht</label><br><input id="sihtKoht" type="text" name="sihtKoht" value.bind="userData.sihtKoht"></div>
                         <div><label for="date">Kuupäev</label><br><input id="date" type="date" name="date"></div>
                         <div><label for="time">Kellaaeg</label><br><input id="time" type="time" name="time"></div>
                         <div><label for="freeSpace">Vaba ruum</label><br><input id="freeSpace" type="number" name="freeSpace" style="width:70%!important">
