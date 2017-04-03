@@ -8,8 +8,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "aurelia-bootstrapper": "^2.1.0",
+    "au-table": "^0.1.12",
     "aurelia-animator-css": "^1.0.1",
+    "aurelia-bootstrapper": "^2.1.0",
+    "aurelia-modal": "^1.0.1",
     "bluebird": "^3.4.1",
     "requirejs": "^2.3.2",
     "text": "github:requirejs/text#latest"
@@ -48,5 +50,15 @@
     "karma-chrome-launcher": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-babel-preprocessor": "^6.0.1"
+  },
+  "jspm": {
+    "dependencies": {
+      "aurelia-table": "github:tochoromero/aurelia-table@^0.1.11"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }
