@@ -1,14 +1,11 @@
 import {HttpClient, json} from 'aurelia-fetch-client'
 import environment from '../environment'
 
+var userData={};
+
 export class reg_soit {
-   
-    
-   var userData = {};
     
 
-	
- 
     activate() {
         let client = new HttpClient();
         
@@ -22,7 +19,7 @@ export class reg_soit {
     
     addRide() {
 		let client = new HttpClient();
-        var userData = {}
+        
         
 
 		client.fetch(environment.serverURL + 'rides/create', {
@@ -36,4 +33,4 @@ export class reg_soit {
 		});
         	console.log("Method executed!")
 	}
-}
+};
