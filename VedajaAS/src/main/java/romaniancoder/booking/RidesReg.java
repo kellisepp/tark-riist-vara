@@ -12,63 +12,101 @@ public class RidesReg {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String lahtekoht;
-	private String sihtkoht;
-	private long kuupaev;
-	private long kellaaeg;
-	private int vabaruum;
-	private String yhik;
-	private String soidukiliik;
-	private String lisainfo;
+    private String lahteKoht;
+	private String sihtKoht;
+	private String date;
+	private long time;
+	private int freeSpace;
+	private String uhik;
+	private String soiduk;
+	private String additionalInfo;
     public RidesReg(){}
 
-    public RidesReg(String lahtekoht, String sihtkoht, long kuupaev, long kellaaeg, int vabaruum, String yhik,
-			String soidukiliik, String lisainfo){
-    	this.lahtekoht = lahtekoht;
-		this.sihtkoht = sihtkoht;
-		this.kuupaev = kuupaev;
-		this.kellaaeg = kellaaeg;
-		this.vabaruum = vabaruum;
-		this.yhik = yhik;
-		this.soidukiliik = soidukiliik;
-		this.lisainfo = lisainfo;
+    public RidesReg(String lahteKoht, String sihtKoht, String date, long time, int freeSpace, String uhik,
+			String soiduk, String additionalInfo){
+    	
+		this.sihtKoht = sihtKoht;
+		this.lahteKoht = lahteKoht;
+		this.date = date;
+		this.time = time;
+		this.freeSpace = freeSpace;
+		this.uhik = uhik;
+		this.soiduk = soiduk;
+		this.additionalInfo = additionalInfo;
     }
 
 
 
-    public String getLahtekoht() {
-		return lahtekoht;
+  
+	
+
+	public String getLahteKoht() {
+		return lahteKoht;
 	}
 
-	public String getSihtkoht() {
-		return sihtkoht;
+	public String getSihtKoht() {
+		return sihtKoht;
 	}
 
-	public long getKuupaev() {
-		return kuupaev;
+	public String getDate() {
+		return date;
 	}
 
-	public long getKellaaeg() {
-		return kellaaeg;
+	public long getTime() {
+		return time;
 	}
 
-	public int getVabaruum() {
-		return vabaruum;
+	public int getFreeSpace() {
+		return freeSpace;
 	}
 
-	public String getYhik() {
-		return yhik;
+	public String getUhik() {
+		return uhik;
 	}
 
-	public String getSoidukiliik() {
-		return soidukiliik;
+	public String getSoiduk() {
+		return soiduk;
 	}
 
-	public String getLisainfo() {
-		return lisainfo;
+	public String getAdditionalInfo() {
+		return additionalInfo;
 	}
 
-	public long getId() {
-        return id;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setLahteKoht(String lahteKoht) {
+		this.lahteKoht = lahteKoht;
+	}
+
+	public void setSihtKoht(String sihtKoht) {
+		this.sihtKoht = sihtKoht;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public void setTime(long time) {
+		this.time = time;
+	}
+
+	public void setFreeSpace(int freeSpace) {
+		this.freeSpace = freeSpace;
+	}
+
+	public void setUhik(String uhik) {
+		this.uhik = uhik;
+	}
+
+	public void setSoiduk(String soiduk) {
+		this.soiduk = soiduk;
+	}
+
+	public void setAdditionalInfo(String additionalInfo) {
+		this.additionalInfo = additionalInfo;
+	}
+
+	
 }

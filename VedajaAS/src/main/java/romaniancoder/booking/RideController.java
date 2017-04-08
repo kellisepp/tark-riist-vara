@@ -24,7 +24,7 @@ public class RideController {
         this.ridesRepository = ridesRepository;
     }
     
-    @CrossOrigin(origins = "http://localhost:9000")
+    
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     @ApiMethod(description = "Get all registrated rides from the database")
     public List<RidesReg> getAll(){
@@ -32,8 +32,8 @@ public class RideController {
     }
 
   
-    @CrossOrigin(origins = "http://localhost:9000")
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
+  
+    @RequestMapping(value = "/create", method = RequestMethod.POST,consumes = "application/json")
     @ApiMethod(description = "Create a ride and save it to database")
     public List<RidesReg> create(@RequestBody RidesReg ridesReg){
         ridesRepository.save(ridesReg);
