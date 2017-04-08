@@ -2,17 +2,23 @@ import {HttpClient, json} from 'aurelia-fetch-client'
 import environment from '../environment'
 
 var userData={};
+var userList=[];
 
 export class reg_soit {
+    contructor(userData){
+        this.userData = userData;
+    }
     
+    
+
 
     activate() {
         let client = new HttpClient();
         
         
-        client.fetch(environment.serverURL + 'rides/all')
+        /*client.fetch(environment.serverURL + 'rides/all')
         .then(response => response.json())
-        .then(users => this.userList = users);
+        .then(users => this.userList = users);*/
     }
     
     
@@ -27,8 +33,8 @@ export class reg_soit {
 			'body': json(this.userData)
 		})
 			.then(response => response.json())
-			.then(data => {
-				console.log("Server saatissad " + data.lahteKoht);
+			.then(userData => {
+				console.log("Server saatis ära, networkist create pealt naeb, andmebaasis peaks ka olema");
             console.log(userData);
 		});
         	console.log("Method executed!")
