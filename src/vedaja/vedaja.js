@@ -1,3 +1,6 @@
+import {HttpClient, json} from 'aurelia-fetch-client'
+import environment from '../environment'
+
 var userList = [];
 
 export class vedaja {
@@ -10,6 +13,7 @@ export class vedaja {
         client.fetch(environment.serverURL + 'rides/all')
         .then(response => response.json())
         .then(users => this.userList = users);
+        console.log("hehe");
     }
     
 }
