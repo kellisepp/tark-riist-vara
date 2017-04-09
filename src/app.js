@@ -9,6 +9,7 @@ export class App {
       { route: 'vedaja',            name: 'vedaja',      moduleId: 'vedaja/vedaja', title:"Vedaja",   nav: true },
       { route: 'saatja',            name: 'saatja',      moduleId: 'saatja/saatja', title:"Saatja",   nav: true },
       { route: 'reg_soit',            name: 'reg_soit',      moduleId: 'reg_soit/reg_soit', title:"Registreeri sõit",   nav: true },
+      { route: 'reg_kaup',            name: 'reg_kaup',      moduleId: 'reg_kaup/reg_kaup', title:"Registreeri kaup",   nav: true },
       
       
     ]);
