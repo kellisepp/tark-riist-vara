@@ -1,5 +1,7 @@
 package romaniancoder.booking;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,16 +17,16 @@ public class RidesReg {
     private String lahteKoht;
 	private String sihtKoht;
 	private String date;
-	private long time;
+	private String time;
 	private int freeSpace;
 	private String uhik;
 	private String soiduk;
 	private String additionalInfo;
     public RidesReg(){}
 
-    public RidesReg(String lahteKoht, String sihtKoht, String date, long time, int freeSpace, String uhik,
+    public RidesReg(long id, String lahteKoht, String sihtKoht, String date, String time, int freeSpace, String uhik,
 			String soiduk, String additionalInfo){
-    	
+    	this.id = id;
 		this.sihtKoht = sihtKoht;
 		this.lahteKoht = lahteKoht;
 		this.date = date;
@@ -40,6 +42,10 @@ public class RidesReg {
   
 	
 
+	public long getId() {
+		return id;
+	}
+
 	public String getLahteKoht() {
 		return lahteKoht;
 	}
@@ -52,7 +58,7 @@ public class RidesReg {
 		return date;
 	}
 
-	public long getTime() {
+	public String getTime() {
 		return time;
 	}
 
@@ -88,7 +94,7 @@ public class RidesReg {
 		this.date = date;
 	}
 
-	public void setTime(long time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
 

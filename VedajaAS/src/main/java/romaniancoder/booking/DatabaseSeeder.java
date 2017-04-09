@@ -22,7 +22,7 @@ public class DatabaseSeeder implements CommandLineRunner {
         List<RidesReg> rides = new ArrayList<>();
 
         
-		rides.add(new RidesReg("Tallinn","Tartu","22-22",11,3,"kg","veoauto","yo"));
+		
 		
         ridesRepository.save(rides);
     }
