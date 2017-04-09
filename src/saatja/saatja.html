@@ -1,29 +1,22 @@
 <template>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tarkvaratehnika</title>
-
-	<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
-	<link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico">
-	<link href="src/css/cc-fonts.css" rel="stylesheet" type="text/css"  />
-	<link href="src/css/style.css" rel="stylesheet" type="text/css"  />
-	<link href="src/css/animate.css" rel="stylesheet" type="text/css"  />
-	<link href="src/css/menutoggle.css" rel="stylesheet" type="text/css"  />
-	
-    <!-- Bootstrap -->
+    <title>Tarkvaratehnika</title>
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico">
+    <link href="src/css/cc-fonts.css" rel="stylesheet" type="text/css"  />
+    <link href="src/css/style.css" rel="stylesheet" type="text/css"  />
+    <link href="src/css/animate.css" rel="stylesheet" type="text/css"  />
+    <link href="src/css/menutoggle.css" rel="stylesheet" type="text/css"  />
     <link href="src/css/bootstrap.css" rel="stylesheet">
-
-  </head>
-  <body>
+</head>
+<body>
 	<div class="wrap content-page">
-
-		
-		
-		<div class="header-area fullscreen">
+        <div class="header-area fullscreen">
 			<div class="head-sizer"></div>
 			<div class="red-header">
 			</div>
@@ -33,16 +26,13 @@
 			</div>
 
 		</div>
-		
 		<div class="content-wrapper content-w-side clearfix">
 		
 			<div class="sisuala-alamenu pull-right">
 				<ul class="clearfix">
 					<li><a href="/#/reg_vedu">Registreeri vedu</a></li>
 					<li><a href="#">Minu sõidud</a></li>
-					
-					
-				</ul>
+	           </ul>
 			</div>
 			<div class="sisuala clearfix">
                 <div class="col-md-12">
@@ -54,7 +44,6 @@
                           <th>Kellaaeg</th>
                           <th>Vaba ruum</th>
                           <th>Marsuut</th>
-                          
                         </tr>
                         <tr id="myBtn" style="cursor: pointer;" class="posts">
                           <td><img src="src/img/avatar.png"></td>
@@ -81,102 +70,17 @@
                           <td>Tallinn-Tartu</td>
                         </tr>
                       </table>
-                    
-                    
-                    <!-- The Modal -->
-                        <div id="myModal" class="modal">
-
-                          <!-- Modal content -->
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <span class="close">&times;</span>
-                              <table>
-                                <tr class="modal-table-row">
-                                    <td><img src="src/img/avatar.png"></td>
-                                    <td><img src="src/img/truck_4.jpg"></td>
-                                  </tr>
-                                </table>
-                            </div>
-                            <div class="modal-body">
-                            <table>
-                                <tr class="modal-table-row">
-                                    <td>09.03.17</td>
-                                    <td>13:00</td>
-                                    <td>2EA</td>
-                                    <td>Tallinn-Tartu</td>
-                                </tr>
-                                </table>
-                                <table>
-                                <tr class="modal-table-row">
-                                    <td>Lisainformatsioon:</td>
-                                    <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</td>
-                                </tr>
-                            </table>
-                            </div>
-                            <div class="modal-footer">
-                                <table>
-                                    <tr>
-                                        <td>Telefon</td>
-                                        <td>Email</td>
-                                    </tr>
-                                    <tr class="modal-table-row">
-                                        <td>12345678</td>
-                                        <td><a href="mailto:mari.maasikas@mail.com">mari.maasikas@mail.com</a></td>
-                                    </tr>
-                                </table>
-                            </div>
-                          </div>
-
-                        </div>
-                    
                 </div>
-             
-			</div>
-		
+            </div>
 		</div>
-		
-		
-		
-		
 	</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="src/js/bootstrap.min.js"></script>
-	
-    <script src="src/js/flowtype.js"></script>
+	<script src="src/js/flowtype.js"></script>
     <script src="src/js/jquery.viewportchecker.min.js"></script>
     <script src="src/js/animations.js"></script>
     <script src="src/js/vedaja-js.js"></script>
-    <script src="src/js/vedaja-menu.js"></script>
-    <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        </script>
-	
+    <script src="src/js/vedaja-menu.js"></script>	
   </body>
 </html>
 </template>
