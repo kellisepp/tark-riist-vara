@@ -208,21 +208,6 @@ td img {
 	opacity: 1;
 }
 
-/*
-.red-header {
-	content:'';
-	display:block;
-	position:absolute;
-	top:0;
-	bottom:0;
-	height:100%;
-	right:0;
-	width:30%;
-	background-color:rgba(0, 0, 0, 0.85);
-	z-index:1;
-	padding-top:23px;
-	padding-right:23px;
-}*/
 .page-intro {
     padding: 4em 15% 0;
 }

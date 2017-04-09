@@ -10,19 +10,6 @@ export class reg_soit {
     }
     
     
-
-
-    activate() {
-        let client = new HttpClient();
-        
-        
-        /*client.fetch(environment.serverURL + 'rides/all')
-        .then(response => response.json())
-        .then(users => this.userList = users);*/
-    }
-    
-    
-    
     addRide() {
 		let client = new HttpClient();
         
