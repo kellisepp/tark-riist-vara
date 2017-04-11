@@ -45,7 +45,7 @@
                           <th>Vaba ruum</th>
                           <th>Marsuut</th>
                         </tr>
-                        <tr id="myBtn" class="posts">
+                        <tr id="myBtn" repeat.for="user of userList" class="posts">
                           <td><img src="src/img/avatar.png"></td>
                           <td>${user.soiduk}</td>
                           <td>${user.date}</td>
