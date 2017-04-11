@@ -10,7 +10,7 @@ export class vedaja {
         let client = new HttpClient();
         
         
-        client.fetch(environment.serverURL + 'rides/all')
+        client.fetch(environment.serverURL + 'items/all')
         .then(response => response.json())
         .then(users => this.userList = users);
         console.log("hehe");

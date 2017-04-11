@@ -10,12 +10,12 @@ export class reg_soit {
     }
     
     
-    addRide() {
+    addKaup() {
 		let client = new HttpClient();
         
         
 
-		client.fetch(environment.serverURL + 'rides/create', {
+		client.fetch(environment.serverURL + 'items/create', {
 			'method': "POST",
 			'body': json(this.userData)
 		})
