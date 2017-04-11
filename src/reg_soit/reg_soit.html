@@ -34,18 +34,20 @@
 			</div>
 			<div class="sisuala clearfix">
                 <div class="col-md-6">
-                    <form id="userform" submit.delegate="addRide()" action="vedaja.html">
+                    <form id="userform" submit.delegate="addRide()">
                         <div><label for="lahteKoht">Lähtekoht</label><br><input id="lahteKoht" type="text" name="lahteKoht" value.bind="userData.lahteKoht" required><br><label for="sihtKoht">Sihtkoht</label><br><input id="sihtKoht" type="text" name="sihtKoht" value.bind="userData.sihtKoht"required></div>
                         <div><label for="date">Kuupäev</label><br><input id="date" type="date" name="date" value.bind="userData.date" required></div>
                         <div><label for="time">Kellaaeg</label><br><input id="time" type="time" name="time" value.bind="userData.time" required></div>
                         <div><label for="freeSpace">Vaba ruum</label><br><input id="freeSpace" type="number" name="freeSpace" value.bind="userData.freeSpace" style="width:70%!important" required>
                         <select name="uhik" value.bind="userData.uhik">
+                            <option value="">-</option>
                             <option value="kg">kg</option>
                             <option value="tonn">tonn</option>
                             <option value="kuup">m3</option>
                             <option value="EA">EA</option>
                         </select></div>
                         <div><label for="type">Sõiduki liik</label><br><select name="soiduk" value.bind="userData.soiduk">
+                            <option value="">-</option>
                             <option value="auto">Sõiduauto</option>
                             <option value="maastur">Maastur</option>
                             <option value="kaubik">Kaubik</option>
