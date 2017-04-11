@@ -18,11 +18,12 @@ public class ItemsReg {
 	private String date;
 	private String time;
 	private String item;
+	private String freeSpace;
 	private String uhik;
 	private String additionalInfo;
     public ItemsReg(){}
 
-    public ItemsReg(long id, String lahteKoht, String sihtKoht, String date, String time, String item, String uhik,
+    public ItemsReg(long id, String lahteKoht, String sihtKoht, String date, String time, String item, String freeSpace, String uhik,
 	String additionalInfo){
     	this.id = id;
 		this.sihtKoht = sihtKoht;
@@ -30,6 +31,7 @@ public class ItemsReg {
 		this.date = date;
 		this.time = time;
 		this.item =  item;
+		this.freeSpace = freeSpace;
 		this.uhik = uhik;
 		this.additionalInfo = additionalInfo;
     }
@@ -97,5 +99,14 @@ public class ItemsReg {
 	public void setAdditionalInfo(String additionalInfo) {
 		this.additionalInfo = additionalInfo;
 	}
+
+	public String getFreeSpace() {
+		return freeSpace;
+	}
+
+	public void setFreeSpace(String freeSpace) {
+		this.freeSpace = freeSpace;
+	}
+	
     
 }
