@@ -38,10 +38,6 @@ public class RidesReg {
     }
 
 
-
-  
-	
-
 	public long getId() {
 		return id;
 	}
