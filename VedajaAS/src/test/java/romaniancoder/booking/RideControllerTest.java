@@ -1,4 +1,4 @@
-package romaniancoder.booking;
+/*package romaniancoder.booking;
 
 import static org.junit.Assert.*;
 
@@ -17,10 +17,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.*;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import com.jayway.restassured.RestAssured;
+
 @RunWith(SpringJUnit4ClassRunner.class)   // 1
 @SpringApplicationConfiguration(classes = BookingDemoApplication.class)   // 2
-
-@WebIntegrationTest("localhost:8084")   // 4
+@WebAppConfiguration
+@IntegrationTest("server.port:0")   // 4
 public class RideControllerTest {
  
     @Autowired   // 5
@@ -29,7 +31,6 @@ public class RideControllerTest {
     RidesReg viljandiTartu;
     RidesReg kuressaareTallinn;
 
- 
     @Value("${local.server.port}")   // 6
     int port;
  
@@ -39,43 +40,41 @@ public class RideControllerTest {
         viljandiTartu = new RidesReg(0,"Viljandi","Tartu","2017-05-30","12:30",7,"kg","kaubik","Helistada 1234567");
         kuressaareTallinn = new RidesReg(0,"Kuressaare","Tallinn","2017-06-15","16:30",7,"EA","kaubik","Helistada 1234567");
      
- 
-        // 8
         ridesRepository.deleteAll();
         ridesRepository.save(Arrays.asList(viljandiTartu, kuressaareTallinn));
- 
-        // 9
-        //RestAssured.port = port;
-    }
- 
-    // 10
-    @Test
-    public void canFetchMickey() {
+
+        RestAssured.port = port;
+}
+  
+ @Test
+    public void canFetchRides() {
     	
         long viljandiTartuId = viljandiTartu.getId();
 
-                 ridesRepository.delete(viljandiTartuId);
-                 assertEquals(1,ridesRepository.count());
-                
-                
-              
-    }
+	        when().
+	        	get("/rides/{id}", viljandiTartuId).
+	        then().
+		     
+		        body("sihtKoht", Matchers.is("Viljandi")).
+		        body("id", Matchers.is(viljandiTartuId));
 }
-   //@Test
-   /* public void canFetchAll() {
-        when().
-                get("rides/all").
-        then().
-                
-                body("name", Matchers.hasItems("Mickey Mouse", "Minnie Mouse", "Pluto"));
-    }
- 
+
+   @Test
+	public void canFetchAll() {
+		   
+	        when().
+	                get("rides/all").
+	        then().
+	                
+	                body("sihtKoht", Matchers.hasItems("Viljandi", "Kuressaare"));
+	    }
+	 
     @Test
-    public void canDeletePluto() {
-        Integer plutoId = pluto.getId();
+    public void canDeleteKureTln() {
+        long kuressaareTallinnId = kuressaareTallinn.getId();
  
         when()
-                .delete("/characters/{id}", plutoId).
+                .delete("/characters/{id}", kuressaareTallinnId).
         then().
                 statusCode(HttpStatus.SC_NO_CONTENT);
     }
