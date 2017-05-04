@@ -1,23 +1,20 @@
 /*package romaniancoder.booking;
 
-import static org.junit.Assert.*;
-
 import java.util.Arrays;
 
-import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.*;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.IntegrationTest;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.boot.test.*;
 import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.boot.test.WebIntegrationTest;
-import org.springframework.http.HttpStatus;
-import org.springframework.test.context.junit4.*;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.jayway.restassured.RestAssured;
+
+
 
 @RunWith(SpringJUnit4ClassRunner.class)   // 1
 @SpringApplicationConfiguration(classes = BookingDemoApplication.class)   // 2
@@ -74,9 +71,10 @@ public class RideControllerTest {
         long kuressaareTallinnId = kuressaareTallinn.getId();
  
         when()
-                .delete("/characters/{id}", kuressaareTallinnId).
+                .delete("/delete/{id}", kuressaareTallinnId).
         then().
-                statusCode(HttpStatus.SC_NO_CONTENT);
+                statusCode(HttpStatus.NO_CONTENT);
+    
     }
 }
 */
