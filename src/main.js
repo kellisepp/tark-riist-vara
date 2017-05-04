@@ -1,9 +1,11 @@
 import environment from './environment';
+import config from './authConfig';
 
 //Configure Bluebird Promises.
 Promise.config({
-  warnings: {
-    wForgottenReturn: false
+    longStackTraces: environment.debug,
+    warnings: {
+      wForgottenReturn: false
   }
 });
 
@@ -11,6 +13,9 @@ export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
+    .plugin('aurelia-auth', (baseConfig)=>{
+         baseConfig.configure(config);
+    });
 
   if (environment.debug) {
     aurelia.use.developmentLogging();

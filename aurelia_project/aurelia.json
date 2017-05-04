@@ -103,6 +103,7 @@
           "aurelia-framework",
           "aurelia-history",
           "aurelia-history-browser",
+          "aurelia-http-client",
           "aurelia-loader",
           "aurelia-loader-default",
           "aurelia-logging",
@@ -135,11 +136,11 @@
             "env": "dev"
           },
           {
-            "name": "aurelia-table",
-            "path": "../node_modules/au-table/dist/amd",
-            "main": "index"
-              
+            "name": "aurelia-auth",
+            "path": "../node_modules/aurelia-auth/dist/amd",
+            "main": "aurelia-auth"              
           }
+            
         ]
       }
     ]
