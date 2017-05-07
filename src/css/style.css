@@ -20,7 +20,7 @@ img {
 
 body {
 	line-height:1;
-    font-family: 'Paytone One', sans-serif;
+    font-family: 'Paytone One', sans-serif !important;
 }
 
 
@@ -59,7 +59,7 @@ h2 {
 }
 
 html {
-    font-family: 'Paytone One', sans-serif;
+    font-family: 'Paytone One', sans-serif !important;
 	font-weight:normal;
 	font-size:medium;
 	color:#4d4d4d;
