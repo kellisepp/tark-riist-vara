@@ -7,6 +7,8 @@ import java.util.List;
 
 @Repository
 public interface RidesRepository extends JpaRepository<RidesReg, Long>{
+	
+	List<RidesReg>findById(Integer id);
     
 }
 

@@ -1,5 +1,6 @@
 package romaniancoder.booking;
 
+import java.util.Calendar;
 import java.util.List;
 
 import org.jsondoc.core.annotation.Api;
@@ -7,6 +8,7 @@ import org.jsondoc.core.annotation.ApiMethod;
 import org.jsondoc.core.annotation.ApiPathParam;
 import org.jsondoc.core.pojo.ApiStage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,14 +43,32 @@ public class ItemsController {
 	        return itemsRepository.findAll();
 	    }
 
-	  @RequestMapping(value = "/{lahteKoht}", method = RequestMethod.GET)
+	  @RequestMapping(value = "/findbylk/{lahteKoht}", method = RequestMethod.GET)
 	    @ApiMethod(description = "Get registrated rides from the database filtered by lahteKoht")
 	    public List<ItemsReg> findByLahteKoht(@ApiPathParam(name="lahteKoht")@PathVariable String lahteKoht){
-		  	
-	        	
-	  
-	   
+		  	  
 	  return itemsRepository.findByLahteKoht(lahteKoht);
 
 	  }
+	  @RequestMapping(value = "/findbylksk/{lahteKoht}&{sihtKoht}", method = RequestMethod.GET)
+	    @ApiMethod(description = "Get registrated rides from the database filtered by sihtKoht and lahteKoht")
+	    public List<ItemsReg> findByLahteKohtAndSihtKoht(@Param("lahteKoht") String lahteKoht,@Param("sihtKoht") String sihtKoht){
+		  	  
+	  return itemsRepository.findByLahteKohtAndSihtKoht(lahteKoht,sihtKoht);
+
+	  }
+	  
+
+	
+	  
+	  public void removeOldItems() {
+	        Calendar cal = Calendar.getInstance();
+	        cal.add(Calendar.DATE,-1);
+
+	        java.sql.Date oneYear = new java.sql.Date(cal.getTimeInMillis());
+
+	        ItemsRepository.removeOlderThan(oneYear);
+
+
+	    }
 }

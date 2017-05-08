@@ -32,7 +32,12 @@ public class RideController {
     }
 
   
-  
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @ApiMethod(description = "Get all registrated rides from the database")
+    public List<RidesReg> findById(@ApiPathParam(name = "id") @PathVariable Integer id){
+        return ridesRepository.findById(id);
+    }
+
     @RequestMapping(value = "/create", method = RequestMethod.POST,consumes = "application/json")
     @ApiMethod(description = "Create a ride and save it to database")
     public List<RidesReg> create(@RequestBody RidesReg ridesReg){
@@ -41,6 +46,8 @@ public class RideController {
         return ridesRepository.findAll();
     }
 
+    
+    
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ApiMethod(description = "Remove registrated ride with the provided ID from the database")
     public List<RidesReg> remove(@ApiPathParam(name = "id") @PathVariable long id){
