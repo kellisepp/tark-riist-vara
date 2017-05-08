@@ -27,10 +27,12 @@
 		
 			<div class="sisuala-alamenu pull-right">
 				<ul class="clearfix">
-                    <li><input type="text" placeholder="Lähtekoht" value.bind="search.destination">
+                    <form>
+                        <input type="text" placeholder="Lähtekoht" value.bind="search.startingPoint">
                         <input type="text" placeholder="Sihtkoht" value.bind="search.destination">
-                        <input type="date" placeholder="Kuupäev" value.bind="search.destination">
-                        <button class="search-button" type="submit" click.trigger="searchRide()" name="Otsi">Otsi</button></li><br>
+                        <input type="date" placeholder="Kuupäev" value.bind="search.date">
+                        <button class="search-button" type="submit" click.trigger="searchRide()" name="Otsi">Otsi</button>
+                    </form><br>
 					<li><a href="/#/reg_kaup">Registreeri vedu</a></li>
 					<li><a href="#">Minu sõidud</a></li>
 	           </ul>
