@@ -1,8 +1,17 @@
+import {inject} from 'aurelia-framework';
+import {FetchConfig} from 'aurelia-auth';
+
+@inject(FetchConfig)
 export class App {
-  
-    configureRouter(config, router) {
+    constructor(fetchConfig) {
+	this.fetchConfig = fetchConfig;
+}
+
+configureRouter(config, router) {
     this.router = router;
-    config.title = 'My Aurelia app';
+    this.fetchConfig.configure();
+    config.title = 'My Aurelia App';
+
     config.map([
       { route: ['', 'home'],       name: 'home',       moduleId: 'home/index', title:"Home", nav: true },
       { route: 'choice',            name: 'choice',      moduleId: 'choice/front-page', title:"Valik",   nav: true },
