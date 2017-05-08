@@ -3,6 +3,7 @@ import environment from '../environment'
 
 var userData={};
 var userList=[];
+var search={};
 
 export class reg_soit {
     contructor(userData){
