@@ -28,7 +28,10 @@
 		<div class="content-wrapper content-w-side clearfix">	
 			<div class="sisuala-alamenu pull-right">
 				<ul class="clearfix">
-                    <li><input type="text" placeholder="Otsing"></li>
+                    <li><input type="text" placeholder="Lähtekoht" value.bind="search.destination">
+                        <input type="text" placeholder="Sihtkoht" value.bind="search.destination">
+                        <input type="date" placeholder="Kuupäev" value.bind="search.destination">
+                        <button class="search-button" type="submit" click.trigger="searchRide()" name="Otsi">Otsi</button></li><br>
 					<li><a href="/#/reg_soit">Registreeri sõit</a></li>
 					<li><a href="#">Minu sõidud</a></li>
 				</ul>
