@@ -168,7 +168,7 @@ td img {
 }
 #headertxt {
     position: absolute;
-    top: 50%;
+    top: 60%;
     width: 100%;
     font-size: 25px;
     text-align: center;
@@ -204,6 +204,7 @@ td img {
 .item-1, 
 .item-2, 
 .item-3 {
+    background-color: rgba(0, 0, 0, 0.44);
 	position: absolute;
     display: block;
 	top: 2em;
