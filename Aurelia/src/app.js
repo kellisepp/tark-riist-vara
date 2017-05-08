@@ -14,6 +14,7 @@ configureRouter(config, router) {
 
     config.map([
       { route: ['', 'home'],       name: 'home',       moduleId: 'home/index', title:"Home", nav: true },
+      { route: 'logout',             name:'logout',      moduleId: 'logout/logout',     nav: false, title:'Logout' },
       { route: 'choice',            name: 'choice',      moduleId: 'choice/front-page', title:"Valik",   nav: true },
       { route: 'vedaja',            name: 'vedaja',      moduleId: 'vedaja/vedaja', title:"Vedaja",   nav: true },
       { route: 'saatja',            name: 'saatja',      moduleId: 'saatja/saatja', title:"Saatja",   nav: true },

@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tarkvaratehnika</title>
     <link href="src/css/style.css" rel="stylesheet" type="text/css"  />
-    <link href="src/css/animate.css" rel="stylesheet" type="text/css"  />
-    <link href="src/css/menutoggle.css" rel="stylesheet" type="text/css"  />
     <link href="src/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
@@ -19,36 +17,16 @@
             <div class="headerimg">
                 <img src="src/img/road_3.jpg" width="100%" style="height:100%; top:0; bottom:0;">
                 </div>
-			<div class="col-xs-12 col-sm-9 col-md-8 col-lg-6" style="float: right; background-color: rgba(0, 0, 0, 0.8); margin: 15% 3%; border-radius: 15px;">
-                <form id="signupform" submit.delegate="addUser()" style="margin: 15px;">
-                    <div id="signup" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="padding: 0 8px 15px 8px!important;">
-                        <h2>Registreeru kasutajaks</h2>
-                        <input id="firstName" type="text" name="firstName" placeholder="Eesnimi"><br>
-                        <input id="lastName" type="text" name="lastName" placeholder="Perekonnanimi"><br>
-                        <input id="email" type="email" name="email" placeholder="Email"><br>
-                        <input id="password" type="password" name="password" placeholder="Salasõna"><br>   
-                        <input id="signup" type="submit" name="register">
-                    </div>
-                </form>
-                <form style="margin: 15px;">
-                    <div id="login" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="padding: 0 8px 8px 0!important;">
-                        <h2>Logi sisse</h2>
-                        <input id="email" type="email" name="email" placeholder="Email"><br>
-                        <input id="password" type="password" name="password" placeholder="Salasõna"><br>
-                        <input id="signin" type="submit" name="signin">
-                    </div>
-                </form>
-            </div>
+			    <div class="google-login">
+                <button class="btn btn-block btn-google-plus" click.delegate="authenticate('google')">
+                    <span class="ion-social-googleplus"></span>Sign in with Google
+                </button>
+                </div>
 		</div>    
 	</div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <script src="src/js/bootstrap.min.js"></script>
-	<script src="src/js/flowtype.js"></script>
-    <script src="src/js/jquery.viewportchecker.min.js"></script>
-    <script src="src/js/animations.js"></script>
-    <script src="src/js/vedaja-menu.js"></script>
-    <script src="src/js/vedaja-js.js"></script>
+
 </body>
 </html>
 </template>

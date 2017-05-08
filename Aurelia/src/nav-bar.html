@@ -20,6 +20,12 @@
           <a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.in" href.bind="row.href">${row.title}</a>
         </li>
       </ul>
+      
+      <ul if.bind="isAuthenticated" class="nav navbar-nav navbar-right">
+        <li><a href="/#/profile">Welcome ${displayName}</a></li>
+        <li><a href="/#/logout">Logout</a></li>
+         <li><a href="/#/users">Github Users</a></li>
+      </ul>
 
       <ul class="nav navbar-nav navbar-right">
         <li class="loader" if.bind="router.isNavigating">
