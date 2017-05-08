@@ -92,6 +92,7 @@ table {
 }
 th {
     text-align: center !important;
+    width: 5%;
 }
 
 
@@ -170,7 +171,7 @@ td img {
     position: absolute;
     top: 60%;
     width: 100%;
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
     line-height: normal;
     text-shadow: rgba(0, 0, 0, 0.72);
@@ -209,7 +210,7 @@ td img {
     display: block;
 	top: 2em;
   
-    width: 60%;
+    width: 50%;
   
     font-size: 2em;
 
