@@ -15,5 +15,13 @@ export class vedaja {
         .then(users => this.userList = users);
         console.log("hehe");
     }
+    searchRide() {
+        let client = new HttpClient();
+        
+        
+        client.fetch(environment.serverURL + 'items/destination/'+this.search.destination)
+        .then(response => response.json())
+        .then(users => this.userList = users);
+    }
     
 }
