@@ -1,8 +1,12 @@
 
 Aurelia/scripts/
 
+<<<<<<< HEAD
 app-bundle\.js
 
 Aurelia/
 
 node_modules/\.bin/
+=======
+VedajaAS/src/main/resources/application\.properties
+>>>>>>> auth
