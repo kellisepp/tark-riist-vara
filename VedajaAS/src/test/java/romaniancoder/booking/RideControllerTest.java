@@ -1,4 +1,4 @@
-package romaniancoder.booking;
+/*package romaniancoder.booking;
 
 import java.util.Arrays;
 
@@ -77,3 +77,4 @@ public class RideControllerTest {
     
     }
 }
+*/
