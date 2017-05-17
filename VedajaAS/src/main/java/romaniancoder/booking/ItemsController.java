@@ -41,7 +41,7 @@ public class ItemsController {
 	        return itemsRepository.findAll();
 	    }
 
-	  @RequestMapping(value = "/destination/{lahteKoht}", method = RequestMethod.GET)
+	  @RequestMapping(value = "/{lahteKoht}", method = RequestMethod.GET)
 	    @ApiMethod(description = "Get registrated rides from the database filtered by lahteKoht")
 	    public List<ItemsReg> findByLahteKoht(@ApiPathParam(name="lahteKoht")@PathVariable String lahteKoht){
 		  	
