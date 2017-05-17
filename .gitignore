@@ -1,6 +1,8 @@
 
-node_modules/
+Aurelia/scripts/
 
-\.DS_Store
+app-bundle\.js
 
-scripts/
+Aurelia/
+
+node_modules/\.bin/

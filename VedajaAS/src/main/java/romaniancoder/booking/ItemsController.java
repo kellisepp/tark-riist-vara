@@ -39,15 +39,22 @@ public class ItemsController {
 	    }
 	  @RequestMapping(value = "/all", method = RequestMethod.GET)
 	    @ApiMethod(description = "Get all registrated rides from the database")
-	    public List<ItemsReg> getAll(){
-	        return itemsRepository.findAll();
+	    public List<ItemsReg> findAllByOrderByDateDesc(){
+	        return itemsRepository.findAllByOrderByDateDesc();
 	    }
 
-	  @RequestMapping(value = "/findbylk/{lahteKoht}", method = RequestMethod.GET)
+	  @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	    @ApiMethod(description = "Get all registrated rides from the database")
+	    public List<ItemsReg> findById(@ApiPathParam(name = "id") @PathVariable Integer id){
+	        return itemsRepository.findById(id);
+	    }
+	  
+	  @RequestMapping(value = "/destination/{sihtKoht}", method = RequestMethod.GET)
+
 	    @ApiMethod(description = "Get registrated rides from the database filtered by lahteKoht")
-	    public List<ItemsReg> findByLahteKoht(@ApiPathParam(name="lahteKoht")@PathVariable String lahteKoht){
+	    public List<ItemsReg> findBySihtKoht(@ApiPathParam(name="sihtKoht")@PathVariable String sihtKoht){
 		  	  
-	  return itemsRepository.findByLahteKoht(lahteKoht);
+	  return itemsRepository.findBySihtKoht(sihtKoht);
 
 	  }
 	  @RequestMapping(value = "/findbylksk/{lahteKoht}&{sihtKoht}", method = RequestMethod.GET)
@@ -57,18 +64,12 @@ public class ItemsController {
 	  return itemsRepository.findByLahteKohtAndSihtKoht(lahteKoht,sihtKoht);
 
 	  }
-	  
+	  @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	    @ApiMethod(description = "Remove registrated ride with the provided ID from the database")
+	    public List<ItemsReg> remove(@ApiPathParam(name = "id") @PathVariable Integer id){
+	        itemsRepository.removeById(id);
 
-	
-	  
-	  public void removeOldItems() {
-	        Calendar cal = Calendar.getInstance();
-	        cal.add(Calendar.DATE,-1);
-
-	        java.sql.Date oneYear = new java.sql.Date(cal.getTimeInMillis());
-
-	        ItemsRepository.removeOlderThan(oneYear);
-
-
+	        return itemsRepository.findAll();
 	    }
+	  
 }
