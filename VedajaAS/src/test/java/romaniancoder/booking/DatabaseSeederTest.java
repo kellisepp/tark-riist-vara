@@ -1,4 +1,4 @@
-/*package romaniancoder.booking;
+package romaniancoder.booking;
 
 import static org.junit.Assert.*;
 
@@ -12,4 +12,3 @@ public class DatabaseSeederTest {
 	
 
 }
-*/
