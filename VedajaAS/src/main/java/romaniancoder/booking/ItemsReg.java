@@ -2,17 +2,18 @@ package romaniancoder.booking;
 
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 public class ItemsReg {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Integer id;
     private String lahteKoht;
 	private String sihtKoht;
 	private String date;
@@ -21,11 +22,11 @@ public class ItemsReg {
 	private String freeSpace;
 	private String uhik;
 	private String additionalInfo;
-    public ItemsReg(){}
+	 public ItemsReg(){}
 
-    public ItemsReg(long id, String lahteKoht, String sihtKoht, String date, String time, String item, String freeSpace, String uhik,
+    public ItemsReg(String lahteKoht, String sihtKoht, String date, String time, String item, String freeSpace, String uhik,
 	String additionalInfo){
-    	this.id = id;
+    	
 		this.sihtKoht = sihtKoht;
 		this.lahteKoht = lahteKoht;
 		this.date = date;
@@ -35,8 +36,8 @@ public class ItemsReg {
 		this.uhik = uhik;
 		this.additionalInfo = additionalInfo;
     }
-
-	public long getId() {
+ 
+	public Integer getId() {
 		return id;
 	}
 
@@ -68,7 +69,7 @@ public class ItemsReg {
 		return additionalInfo;
 	}
 
-	public void setId(long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

@@ -1,4 +1,5 @@
 package romaniancoder.booking;
+import static org.hamcrest.Matchers.not;
 
 import java.util.Arrays;
 
@@ -25,13 +26,13 @@ import static com.jayway.restassured.RestAssured.when;
 @SpringApplicationConfiguration(classes = BookingDemoApplication.class)   // 2
 @WebAppConfiguration
 @IntegrationTest("server.port:0")   // 4
-public class RideControllerTest {
+public class ItemsControllerTest {
  
     @Autowired   // 5
-    RidesRepository ridesRepository;
+    ItemsRepository itemsRepository;
  
-    RidesReg viljandiTartu;
-    RidesReg kuressaareTallinn;
+    ItemsReg viljandiTartu;
+    ItemsReg kuressaareTallinn;
 
     @Value("${local.server.port}")   // 6
     int port;
@@ -39,11 +40,11 @@ public class RideControllerTest {
     @Before
     public void setUp() {
         // 7
-        viljandiTartu = new RidesReg("Viljandi","Tartu","2017-04-02","12:30",7,"kg","kaubik","Helistada 1234567");
-        kuressaareTallinn = new RidesReg("Kuressaare","Tallinn","2017-04-05","16:30",7,"EA","kaubik","Helistada 1234567");
+        viljandiTartu = new ItemsReg("Viljandi","Tartu","2017-04-20","12:30","külmik","kg","kaubik","Helistada 1234567");
+        kuressaareTallinn = new ItemsReg("Kuressaare","Tallinn","2017-04-19","16:30","kartul","sdsds","sd","Helistada 1234567");
      
 
-        ridesRepository.save(Arrays.asList(viljandiTartu, kuressaareTallinn));
+        itemsRepository.save(Arrays.asList(viljandiTartu, kuressaareTallinn));
         
 
         RestAssured.port = port;
@@ -55,7 +56,7 @@ public class RideControllerTest {
         Integer viljandiTartuId = viljandiTartu.getId();
 
         when().
-	        	get("/rides/{id}", viljandiTartuId).
+	        	get("/items/{id}", viljandiTartuId).
 	        then().
 		     
 		        
@@ -66,22 +67,22 @@ public class RideControllerTest {
 	public void canFetchAll() {
 		   
 	        when().
-	                get("rides/all").
+	                get("items/all").
 	        then().
 	        statusCode(HttpStatus.SC_OK).
 	                body("sihtKoht", Matchers.hasItems("Tallinn", "Tartu"));
 	    }
-   
+   @Test
    public void WrongSihtKohtFilterBySihtKoht(){
 	   when().
-	   			get("rides/destination/Tallinn").
+	   			get("items/destination/Tallinn").
 	   	then().
 	   		statusCode(HttpStatus.SC_OK).body("sihtKoht", Matchers.not(Matchers.hasItem("Tartu")));
    }
    @Test
    public void FilterBySihtKoht(){
 	   when().
-	   			get("rides/destination/Tallinn").
+	   			get("items/destination/Tallinn").
 	   	then().
 	   		statusCode(HttpStatus.SC_OK).body("sihtKoht", Matchers.hasItem("Tallinn"));
    }
@@ -91,8 +92,9 @@ public class RideControllerTest {
         Integer kuressaareTallinnId = kuressaareTallinn.getId();
  
         when()
-                .get("rides/delete/{id}", kuressaareTallinnId).
+                .get("items/delete/{id}", kuressaareTallinnId).
         then().
         statusCode(HttpStatus.SC_OK);
     }
+    
 }
