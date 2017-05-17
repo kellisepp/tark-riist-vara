@@ -1,4 +1,12 @@
 
 Aurelia/scripts/
 
+<<<<<<< HEAD
 VedajaAS/src/main/resources/application\.properties
+=======
+app-bundle\.js
+
+Aurelia/
+
+node_modules/\.bin/
+>>>>>>> parent of 891114f... Merge branch 'auth'
