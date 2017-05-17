@@ -3,13 +3,22 @@ Aurelia/scripts/
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 VedajaAS/src/main/resources/application\.properties
 =======
+=======
+>>>>>>> parent of 02f5e74... Revert "Merge branch 'auth'"
 app-bundle\.js
 
 Aurelia/
 
 node_modules/\.bin/
+<<<<<<< HEAD
 >>>>>>> parent of 891114f... Merge branch 'auth'
+=======
+=======
+VedajaAS/src/main/resources/application\.properties
+>>>>>>> auth
+>>>>>>> parent of 02f5e74... Revert "Merge branch 'auth'"
 =======
 >>>>>>> parent of d3f2d28... kk
